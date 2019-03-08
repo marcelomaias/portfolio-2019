@@ -1,0 +1,76 @@
+@import "variables";
+@import "mixings";
+
+.wrapper {
+  @include screen(small) {
+    display: flex;
+  }
+}
+header {
+  background: lightgreen;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 1rem;
+  @include screen(small) {
+    flex: 0 0 240px;
+    height: 100vh;
+  }
+  @include screen(medium) {
+    flex: 0 0 300px;
+  }
+  a,
+  a:visited {
+    color: $text-color;
+  }
+  h2,
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+  }
+  .skills {
+    margin: 2em 0;
+    span {
+      display: inline-block;
+      padding: 0.2rem 0.8em;
+      margin: 0 0.5em 0.5em 0;
+      background: lightpink;
+      @include border-radius(4px);
+    }
+  }
+}
+nav {
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-right: 1em;
+    }
+  }
+  a.active {
+    border-bottom: 4px solid limegreen;
+  }
+}
+main,
+footer {
+  @include screen(small) {
+  }
+}
+
+.home-content {
+  padding: 1rem;
+  @include screen(small) {
+    display: flex;
+    padding: 2em;
+    p {
+      display: block;
+      padding: 1em;
+    }
+  }
+  @include screen(medium) {
+    padding: 4em;
+  }
+  @include screen(large) {
+    padding: 8em;
+    font-size: 1.5rem;
+  }
+}
