@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import Img from "gatsby-image"
 
+import "../scss/_fontello.scss"
+
 const Header = ({ siteTitle }) => (
   <StaticQuery
     query={graphql`
@@ -43,6 +45,26 @@ const Header = ({ siteTitle }) => (
           <span>Drush</span>
           <span>Composer</span>
         </section>
+        <div className="social">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/marcelomaia/"
+          >
+            <i className="icon-linkedin" />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/marcelomaias"
+          >
+            <i className="icon-github" />
+          </a>
+        </div>
+        <small>
+          I can also play electric bass if needed.
+          <i className="icon-emo-laugh" />
+        </small>
       </header>
     )}
   />

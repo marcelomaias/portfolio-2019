@@ -1,6 +1,21 @@
 @import "variables";
 @import "mixings";
 
+a,
+a:visited {
+  color: $accent-color;
+}
+
+.skills {
+  span {
+    display: inline-block;
+    padding: 0.2rem 0.8em;
+    margin: 0 0.75em 1em 0;
+    background: #fff;
+    @include border-radius(4px);
+  }
+}
+
 .wrapper > header {
   text-align: center;
   font-size: 0.8em;
@@ -20,12 +35,13 @@
     color: $text-color2;
   }
   h1 {
+    font-size: 1.5em;
     margin: 1em 0 0 0;
-    font-weight: 400;
+    font-weight: 300;
   }
   h2 {
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 300;
     margin: 0 0 2rem 0;
   }
@@ -33,21 +49,37 @@
     text-transform: uppercase;
     font-size: 1em;
   }
-  .skills {
-    margin: 2em 0;
-    span {
-      display: inline-block;
-      padding: 0.2rem 0.8em;
-      margin: 0 0.75em 1em 0;
-      background: #fff;
-      @include border-radius(4px);
-    }
-  }
   .gatsby-image-wrapper {
     max-width: 150px;
     margin: 0 auto;
     @include border-radius(50%);
     @include box-shadow(1);
+  }
+  .skills {
+    margin: 2em 0;
+  }
+  .social {
+    margin: 0 0 2rem 0;
+    font-size: 1.5em;
+    @include screen(large) {
+      margin: 2rem 0;
+    }
+    a {
+      margin-right: 0.5rem;
+    }
+  }
+  small {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    @include screen(small) {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+    }
+    @include screen(medium) {
+      padding: 0 30px;
+    }
   }
 }
 nav {
@@ -71,7 +103,7 @@ nav {
     }
   }
   a.active {
-    border-bottom: 4px solid limegreen;
+    border-bottom: 2px solid $accent-color;
   }
 }
 main {
@@ -116,6 +148,9 @@ main {
     flex-flow: row wrap;
     justify-content: space-between;
   }
+  h3 {
+    margin: 0.5rem 0;
+  }
 }
 #projects > * {
   margin-bottom: 4rem;
@@ -123,7 +158,28 @@ main {
     width: 48%;
   }
   @include screen(large) {
-    width: 31.5%;
+    width: 31%;
+  }
+  .links {
+    float: right;
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 1rem;
+    a {
+      margin-left: 1rem;
+    }
+  }
+  .imgContainer {
+    position: relative;
+    .skills {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 0.75rem;
+      span {
+        margin: 0 0.5rem 0.5rem 0;
+      }
+    }
   }
 }
 .logos {
