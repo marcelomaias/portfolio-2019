@@ -1,47 +1,71 @@
 @import "variables";
 @import "mixings";
 
-.wrapper {
-  @include screen(small) {
-    display: flex;
-  }
-}
-header {
-  background: lightgreen;
+.wrapper > header {
   text-align: center;
   font-size: 0.8em;
   padding: 1rem;
+  color: $text-color2;
+  @include box-shadow(1);
   @include screen(small) {
-    flex: 0 0 240px;
     height: 100vh;
+    position: fixed;
+    width: $sidebar-width - 50px;
   }
   @include screen(medium) {
-    flex: 0 0 300px;
+    width: $sidebar-width;
   }
   a,
   a:visited {
-    color: $text-color;
+    color: $text-color2;
   }
-  h2,
-  h3 {
+  h1 {
+    margin: 1em 0 0 0;
+    font-weight: 400;
+  }
+  h2 {
     text-transform: uppercase;
     font-size: 1.1em;
+    font-weight: 300;
+    margin: 0 0 2rem 0;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-size: 1em;
   }
   .skills {
     margin: 2em 0;
     span {
       display: inline-block;
       padding: 0.2rem 0.8em;
-      margin: 0 0.5em 0.5em 0;
-      background: lightpink;
+      margin: 0 0.75em 1em 0;
+      background: #fff;
       @include border-radius(4px);
     }
   }
+  .gatsby-image-wrapper {
+    max-width: 150px;
+    margin: 0 auto;
+    @include border-radius(50%);
+    @include box-shadow(1);
+  }
 }
 nav {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 1rem;
+  @include screen(small) {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  @include screen(medium) {
+    padding: 2rem 0 0 4rem;
+    font-size: 2rem;
+  }
   ul {
     display: flex;
     list-style-type: none;
+    padding: 0;
     li {
       margin-right: 1em;
     }
@@ -50,13 +74,16 @@ nav {
     border-bottom: 4px solid limegreen;
   }
 }
-main,
-footer {
+main {
   @include screen(small) {
+    margin-left: $sidebar-width - 50px;
+  }
+  @include screen(medium) {
+    margin-left: $sidebar-width;
   }
 }
 
-.home-content {
+#home-content {
   padding: 1rem;
   @include screen(small) {
     display: flex;
@@ -67,10 +94,48 @@ footer {
     }
   }
   @include screen(medium) {
-    padding: 4em;
+    padding: 4rem 4rem 2rem 4em;
   }
   @include screen(large) {
-    padding: 8em;
+    padding: 6rem 6rem 2rem 6em;
     font-size: 1.5rem;
+  }
+}
+#projects-content {
+  padding: 1rem;
+  @include screen(small) {
+    padding: 2rem;
+  }
+  @include screen(medium) {
+    padding: 4rem;
+  }
+}
+#projects {
+  @include screen(small) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+#projects > * {
+  margin-bottom: 4rem;
+  @include screen(small) {
+    width: 48%;
+  }
+  @include screen(large) {
+    width: 31.5%;
+  }
+}
+.logos {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  img {
+    max-width: 130px;
+    max-height: 100px;
+    vertical-align: middle;
+    filter: grayscale(100%);
+    opacity: 0.25;
+    margin: 2rem;
   }
 }
