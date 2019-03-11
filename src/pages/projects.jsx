@@ -37,7 +37,7 @@ const projectsPage = () => (
             }
           }
         }
-        proj05: file(relativePath: { eq: "proj05.jpg" }) {
+        proj05: file(relativePath: { eq: "portfolio-2019.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 600) {
               ...GatsbyImageSharpFluid
@@ -65,7 +65,7 @@ const projectsPage = () => (
             <Project
               image={data.bigben}
               title="Bigben"
-              desc={"Ecommerce frontend implements in VTEX(Commercial CMS)"}
+              desc={"Ecommerce frontend implements in VTEX (Commercial CMS)"}
               skills={["HTML", "SASS", "Javascript"]}
               siteURL="https://www.bigben.com.br/"
             />
