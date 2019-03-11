@@ -5,6 +5,7 @@ module.exports = {
    performant, beautiful, and usable web applications.`,
     author: `Marcelo Maia`,
   },
+  pathPrefix: `/site`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
