@@ -118,8 +118,10 @@ main {
 #page-content {
   padding: 1rem;
   @include screen(small) {
-    display: flex;
     padding: 2em;
+  }
+  @include screen(medium) {
+    display: flex;
     p {
       display: block;
       padding: 1em;
