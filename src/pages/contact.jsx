@@ -34,7 +34,7 @@ const ContactPage = () => (
       </div>
       <div>
         <p>
-          If you prefer, you can reach me out at
+          If you prefer, you can reach me by email at
           <a href="mailto:marcelomaias@gmail.com"> marcelomaias@gmail.com</a>.
         </p>
       </div>
