@@ -15,6 +15,11 @@ const nav = () => {
             Projects
           </Link>
         </li>
+        <li>
+          <Link to="/contact" activeClassName="active">
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   )

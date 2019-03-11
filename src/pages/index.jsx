@@ -1,8 +1,6 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 
 import logoHTML from "../images/logos/logo-html.svg"
@@ -16,9 +14,12 @@ import logoGit from "../images/logos/logo-git.svg"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[`frontend`, `javascript`, `gatsby`, `react`, `sass`]}
+    />
 
-    <div id="home-content">
+    <div id="page-content">
       <p>
         I'm Marcelo Maia, a self-taught front-end web developer with a love of
         performant, beautiful, and usable web applications.
@@ -39,7 +40,6 @@ const IndexPage = () => (
       <img src={logoGulp} alt="Logo Gulp" />
       <img src={logoGit} alt="Logo Git" />
     </div>
-    {/* <Link to="/about/">Go to the About Page</Link> */}
   </Layout>
 )
 

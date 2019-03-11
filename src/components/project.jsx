@@ -14,18 +14,18 @@ const project = props => {
       </div>
       <div className="links">
         {props.siteURL ? (
-          <a href={props.siteURL}>
-            Site <i class="icon-link-ext" />
+          <a href={props.siteURL} target="_blank" rel="noopener noreferrer">
+            Site <i className="icon-link-ext" />
           </a>
         ) : null}
         {props.demoURL ? (
-          <a href={props.demoURL}>
-            Demo <i class="icon-link-ext" />
+          <a href={props.demoURL} target="_blank" rel="noopener noreferrer">
+            Demo <i className="icon-link-ext" />
           </a>
         ) : null}
         {props.codeURL ? (
-          <a href={props.codeURL}>
-            Code <i class="icon-github" />
+          <a href={props.codeURL} target="_blank" rel="noopener noreferrer">
+            Code <i className="icon-github" />
           </a>
         ) : null}
       </div>

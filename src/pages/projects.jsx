@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Project from "../components/project"
@@ -55,59 +55,61 @@ const projectsPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="Projects" />
+        <SEO
+          title="Projects"
+          keywords={[`frontend`, `javascript`, `gatsby`, `react`, `sass`]}
+        />
         <div id="projects-content">
-          <h1>Projects</h1>
+          {/* <h1>Projects</h1> */}
           <div id="projects">
             <Project
               image={data.bigben}
               title="Bigben"
               desc={"Ecommerce frontend implements in VTEX(Commercial CMS)"}
-              skills={["HTML", "CSS", "SASS"]}
-              siteURL="http://blablabla"
+              skills={["HTML", "SASS", "Javascript"]}
+              siteURL="https://www.bigben.com.br/"
             />
             <Project
               image={data.proj05}
               title="This site"
-              desc={"This site is made with React and GraphQL."}
-              skills={["HTML", "CSS", "SASS"]}
-              demoURL="http://blablabla"
+              desc={"This site is made with Gatsby (React + GraphQL)."}
+              skills={["Gatsby", "React", "GraphQL", "SASS"]}
+              demoURL=""
               codeURL="http://blebleble"
             />
             <Project
               image={data.proj06}
               title="Movee"
               desc={"A React SPA making requests to The MovieDB API."}
-              skills={["HTML", "CSS", "SASS"]}
-              demoURL="http://blablabla"
-              codeURL="http://blebleble"
+              skills={["React", "SASS"]}
+              demoURL="/projects/moovee"
+              codeURL="https://github.com/marcelomaias/moovee"
             />
             <Project
               image={data.proj01}
               title="Landing page"
               desc={"Landing page made with Vue and AOS for the animations."}
-              skills={["HTML", "CSS", "SASS"]}
-              demoURL="http://blablabla"
-              codeURL="http://blebleble"
+              skills={["VueJS", "SASS", "Vuetify"]}
+              demoURL="/projects/vue-landing"
+              codeURL="https://github.com/marcelomaias/vue-landing"
             />
             <Project
               image={data.proj02}
               title="Bands"
               desc={"A simple SPA made with Vue showcasing a menu animation."}
-              skills={["HTML", "CSS", "SASS"]}
-              demoURL="http://blablabla"
-              codeURL="http://blebleble"
+              skills={["VueJS", "SASS"]}
+              demoURL="/projects/vue-bands"
+              codeURL="https://github.com/marcelomaias/vue-bands"
             />
             <Project
               image={data.proj03}
               title="Background video"
               desc={"Video used as a background(can be paused)."}
-              skills={["HTML", "CSS", "SASS"]}
-              demoURL="http://blablabla"
-              codeURL="http://blebleble"
+              skills={["HTML", "CSS", "Javascript"]}
+              demoURL="/projects/video-bg"
+              codeURL="https://github.com/marcelomaias/video-background"
             />
           </div>
-          <Link to="/">Go back to the homepage</Link>
         </div>
       </Layout>
     )}
