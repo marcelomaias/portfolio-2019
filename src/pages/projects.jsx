@@ -75,7 +75,7 @@ const projectsPage = () => (
               desc={"This site is made with Gatsby (React + GraphQL)."}
               skills={["Gatsby", "React", "GraphQL", "SASS"]}
               demoURL=""
-              codeURL="http://blebleble"
+              codeURL="https://github.com/marcelomaias/portfolio-2019"
             />
             <Project
               image={data.proj06}
