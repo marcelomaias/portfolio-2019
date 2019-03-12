@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://marcelomaias.net">
-    <img alt="Gatsby" src="https://marcelomaias.net/icon.png" width="80" />
+    <img alt="Marcelo Maia's logo" src="https://marcelomaias.net/icon.png" width="80" />
   </a>
 </p>
 <h1 align="center">
