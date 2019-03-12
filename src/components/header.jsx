@@ -1,26 +1,14 @@
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Img from "gatsby-image"
 
 import "../scss/_fontello.scss"
+import maiaPic from "../images/maia.jpg"
 
-const Header = ({ siteTitle }) => (
-  <StaticQuery
-    query={graphql`
-      {
-        profilePic: file(relativePath: { eq: "maia.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <header>
-        <Img fluid={data.profilePic.childImageSharp.fluid} />
+const Header = ({siteTitle}) => {
+  return ( 
+    <header> 
+        <img src={maiaPic} alt="Marcelo pic" />
         <h1>
           <Link to="/">{siteTitle}</Link>
         </h1>
@@ -66,9 +54,8 @@ const Header = ({ siteTitle }) => (
           <i className="icon-emo-laugh" />
         </small>
       </header>
-    )}
-  />
-)
+   );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
