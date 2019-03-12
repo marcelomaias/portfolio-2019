@@ -6,6 +6,6 @@
 <h1 align="center">
   Marcelo Maia's website
 </h1>
-<h3 align="center" style="text-transform: uppercase">
+<h3 align="center">
   Frontend web developer
 </h3>
