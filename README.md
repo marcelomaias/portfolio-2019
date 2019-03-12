@@ -5,5 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Marcelo Maia Portfolio - Frontend web developer
+  Marcelo Maia's website
 </h1>
+
+## Frontend web developer
