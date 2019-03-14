@@ -30,13 +30,7 @@ const projectsPage = () => (
             }
           }
         }
-        proj03: file(relativePath: { eq: "proj03.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+
         bigben: file(relativePath: { eq: "bigben.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 600) {
@@ -115,14 +109,6 @@ const projectsPage = () => (
               skills={["VueJS", "SASS"]}
               demoURL="/projects/vue-bands"
               codeURL="https://github.com/marcelomaias/vue-bands"
-            />
-            <Project
-              image={data.proj03}
-              title="Background video"
-              desc={"Video used as a background(can be paused)."}
-              skills={["HTML", "CSS", "Javascript"]}
-              demoURL="/projects/video-bg"
-              codeURL="https://github.com/marcelomaias/video-background"
             />
           </div>
         </div>
