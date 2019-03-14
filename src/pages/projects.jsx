@@ -87,7 +87,7 @@ const projectsPage = () => (
             <Project
               image={data.blogmd}
               title="Markdown blog"
-              desc={"A Gatsby static blog that loads markdown files as posts."}
+              desc={"A Gatsby static blog that loads Markdown files as posts."}
               skills={["Gatsby", "React", "GraphQL", "SASS"]}
               demoURL="/projects/blog-markdown/"
               codeURL="https://github.com/marcelomaias/gatsby-blog"
