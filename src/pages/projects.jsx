@@ -23,6 +23,13 @@ const projectsPage = () => (
             }
           }
         }
+        blogmd: file(relativePath: { eq: "blog-3.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         proj03: file(relativePath: { eq: "proj03.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 600) {
@@ -76,6 +83,14 @@ const projectsPage = () => (
               skills={["Gatsby", "React", "GraphQL", "SASS"]}
               demoURL=""
               codeURL="https://github.com/marcelomaias/portfolio-2019"
+            />
+            <Project
+              image={data.blogmd}
+              title="Markdown blog"
+              desc={"A Gatsby static blog that loads markdown files as posts."}
+              skills={["Gatsby", "React", "GraphQL", "SASS"]}
+              demoURL="/projects/blog-markdown/"
+              codeURL="https://github.com/marcelomaias/gatsby-blog"
             />
             <Project
               image={data.proj06}
