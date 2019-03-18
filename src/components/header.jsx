@@ -5,9 +5,10 @@ import React from "react"
 import "../scss/_fontello.scss"
 import maiaPic from "../images/maia.jpg"
 
-const Header = ({siteTitle}) => {
-  return ( 
-    <header> 
+const Header = ({ siteTitle }) => {
+  return (
+    <header>
+      <div>
         <img src={maiaPic} alt="Marcelo pic" />
         <h1>
           <Link to="/">{siteTitle}</Link>
@@ -53,8 +54,9 @@ const Header = ({siteTitle}) => {
           I can also play electric bass if needed.
           <i className="icon-emo-laugh" />
         </small>
-      </header>
-   );
+      </div>
+    </header>
+  )
 }
 
 Header.propTypes = {
