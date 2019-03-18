@@ -26,11 +26,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <div className="wrapper">
-        <Header siteTitle={data.site.siteMetadata.title} />
         <main>
           <Nav />
           {children}
         </main>
+        <Header siteTitle={data.site.siteMetadata.title} />
+
         {/* <footer>© {new Date().getFullYear()}, Marcelo Maia</footer> */}
       </div>
     )}
