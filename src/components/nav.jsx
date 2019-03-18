@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
+// const handleClick = e => {
+//   e.preventDefault()
+// }
+
 const nav = () => {
   return (
     <nav>
