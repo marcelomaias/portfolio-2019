@@ -66,7 +66,7 @@ const projectsPage = () => (
             <Project
               image={data.bigben}
               title="Bigben"
-              desc={"Ecommerce frontend implements in VTEX (Commercial CMS)"}
+              desc={"E-commerce frontend implemented in VTEX (Commercial CMS)"}
               skills={["HTML", "SASS", "Javascript"]}
               siteURL="https://www.bigben.com.br/"
             />
