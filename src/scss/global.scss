@@ -19,3 +19,38 @@ body {
 a:hover {
   text-decoration: none;
 }
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 3px solid lighten($text-color2, 30%);
+  margin-bottom: 1em;
+  @include border-radius(8px);
+  &:focus {
+    outline: none;
+    border-color: lighten($text-color2, 15%);
+  }
+}
+.button {
+  text-align: right;
+}
+button {
+  width: auto;
+  background-color: $accent-color;
+  color: lighten($accent-color, 40%);
+  border-color: lighten($accent-color, 40%);
+  transition: background-color 0.25s;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($accent-color, 5%);
+  }
+  &:disabled {
+    cursor: initial;
+    opacity: 0.35;
+  }
+  &:disabled:hover {
+    background-color: $accent-color;
+  }
+}

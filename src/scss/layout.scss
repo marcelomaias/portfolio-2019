@@ -19,12 +19,13 @@ a:visited {
 .wrapper > header {
   text-align: center;
   font-size: 0.8em;
-  padding: 1rem;
   color: $text-color2;
   @include box-shadow(1);
   @include screen(small) {
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
     width: $sidebar-width - 50px;
   }
   @include screen(medium) {
@@ -66,19 +67,31 @@ a:visited {
     }
     a {
       margin-right: 0.5rem;
+      text-align: center;
     }
   }
   small {
     font-size: 12px;
     width: 100%;
     text-align: center;
+    box-shadow: 0 -8px 7px $bg-color, 0 1px 2px rgba(0, 0, 0, 0.24);
     @include screen(small) {
       position: absolute;
-      bottom: 10px;
+      bottom: 0px;
       left: 0;
+      line-height: 2.5;
+      background: $bg-color;
     }
     @include screen(medium) {
       padding: 0 30px;
+    }
+  }
+  > div {
+    overflow-y: auto;
+    height: 100%;
+    padding: 3rem 1rem 1rem 1rem;
+    @include screen(small) {
+      padding: 1rem;
     }
   }
 }
@@ -121,14 +134,15 @@ main {
     padding: 2em;
   }
   @include screen(medium) {
+    padding: 4rem 2rem 2rem 2em;
     display: flex;
     p {
       display: block;
       padding: 1em;
     }
-  }
-  @include screen(medium) {
-    padding: 4rem 4rem 2rem 4em;
+    > * {
+      flex: 1 0 50%;
+    }
   }
   @include screen(large) {
     padding: 6rem 6rem 2rem 6em;
@@ -201,30 +215,55 @@ main {
 .contact-page {
   // text-align: center;
   // justify-content: center;
-
+  p.email {
+    text-align: center;
+  }
   p {
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
   .social {
     margin: 2rem 0;
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-content: center;
+    flex-flow: row wrap;
+    height: 100%;
+    @include screen(medium) {
+      margin: 0;
+    }
     a {
       display: block;
       margin: 0 1rem;
       @include screen(medium) {
         margin: 0 2rem;
+        flex: 0 1 auto;
+        // align-self: flex-end;
+      }
+      i {
+        font-size: 2rem;
+        @include screen(small) {
+          font-size: 2.5rem;
+        }
+        @include screen(medium) {
+          font-size: 3rem;
+        }
       }
     }
-    i {
-      font-size: 2rem;
-      @include screen(small) {
-        font-size: 2.5rem;
-      }
-      @include screen(medium) {
-        font-size: 3rem;
-      }
+    p {
+      flex: 1 1 100%;
+      display: inline;
+      // align-self: baseline;
     }
+  }
+}
+.thanksMessage {
+  background: rgb(185, 236, 109);
+  color: darken(rgb(185, 236, 109), 40%);
+  padding: 0.5rem 1rem;
+  border: 3px solid darken(rgb(185, 236, 109), 10%);
+  @include border-radius(4px);
+  text-align: center;
+  @include screen(medium) {
+    text-align: left;
   }
 }
