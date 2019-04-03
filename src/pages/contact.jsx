@@ -73,7 +73,7 @@ class ContactPage extends React.Component {
               </div>
             ) : (
               <form onSubmit={this.handleSubmit}>
-                <p>I few ways to get in touch:</p>
+                <p>A few ways to get in touch:</p>
                 <input
                   type="text"
                   name="name"
