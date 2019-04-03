@@ -26,7 +26,7 @@ const IndexPage = () => (
       </p>
       <p>
         While mostly focusing on the client side, I also have experience working
-        with backend technologies like Apache, PHP, MySQL and Drupal.
+        with backend technologies like NodeJS, Express and MongoDB.
       </p>
     </div>
 
