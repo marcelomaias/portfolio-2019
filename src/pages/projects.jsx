@@ -52,6 +52,13 @@ const projectsPage = () => (
             }
           }
         }
+        proj07: file(relativePath: { eq: "proj07.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -64,11 +71,14 @@ const projectsPage = () => (
           {/* <h1>Projects</h1> */}
           <div id="projects">
             <Project
-              image={data.bigben}
-              title="Bigben"
-              desc={"E-commerce frontend implemented in VTEX (Commercial CMS)"}
-              skills={["HTML", "SASS", "Javascript"]}
-              siteURL="https://www.bigben.com.br/"
+              image={data.proj07}
+              title="CoolRecords"
+              desc={
+                "A CRUD App to save and edit cool album Records. Made with React and Redux."
+              }
+              skills={["React", "Redux", "Express", "MongoDB"]}
+              demoURL="https://marcelomaias.net/projects/records/"
+              codeURL="https://github.com/marcelomaias/records-react"
             />
             <Project
               image={data.proj05}
@@ -85,6 +95,13 @@ const projectsPage = () => (
               skills={["Gatsby", "React", "GraphQL", "SASS"]}
               demoURL="/projects/blog-markdown/"
               codeURL="https://github.com/marcelomaias/gatsby-blog"
+            />
+            <Project
+              image={data.bigben}
+              title="Bigben"
+              desc={"E-commerce frontend implemented in VTEX (Commercial CMS)"}
+              skills={["HTML", "SASS", "Javascript"]}
+              siteURL="https://www.bigben.com.br/"
             />
             <Project
               image={data.proj06}
