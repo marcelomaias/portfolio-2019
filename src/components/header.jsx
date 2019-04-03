@@ -28,10 +28,11 @@ const Header = ({ siteTitle }) => {
         <h3>Backend Experience</h3>
         <section className="skills">
           <span>Apache</span>
-          <span>PHP</span>
-          <span>MySQL</span>
+          <span>Nginx</span>
+          <span>NodeJS</span>
+          <span>Express</span>
+          <span>MongoDB</span>
           <span>Drupal</span>
-          <span>Drush</span>
           <span>Composer</span>
         </section>
         <div className="social">
